@@ -35,6 +35,8 @@
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
             label1 = new Label();
+            button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -114,11 +116,33 @@
             label1.Text = "label1";
             label1.Click += label1_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(223, 269);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 7;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += invert;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(223, 315);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 8;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(label1);
             Controls.Add(radioButton3);
             Controls.Add(radioButton2);
@@ -142,5 +166,7 @@
         private RadioButton radioButton2;
         private RadioButton radioButton3;
         private Label label1;
+        private Button button3;
+        private Button button4;
     }
 }

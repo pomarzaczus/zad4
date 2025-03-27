@@ -22,7 +22,7 @@ namespace zad4
             // Odczytaj zawartoœæ pliku CSV
 
             pictureBox1.Image = Image.FromFile(filePath);
-           
+
 
         }
         private void wczytaj_Click(object sender, EventArgs e)
@@ -44,11 +44,33 @@ namespace zad4
         {
             pictureBox1.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
         }
-        public void invert()
+        public void invert(object sender, EventArgs e)
         {
+            Bitmap bmpDest = null;
+
+            using (Bitmap bmpSource = new Bitmap(pictureBox1.Image))
+            {
+                bmpDest = new Bitmap(bmpSource.Width, bmpSource.Height);
+
+                for (int x = 0; x < bmpSource.Width; x++)
+                {
+                    for (int y = 0; y < bmpSource.Height; y++)
+                    {
+
+                        Color clrPixel = bmpSource.GetPixel(x, y);
+
+                        clrPixel = Color.FromArgb(255 - clrPixel.R, 255 -
+                           clrPixel.G, 255 - clrPixel.B);
+
+                        bmpDest.SetPixel(x, y, clrPixel);
+                    }
+                }
+            }
+
+            pictureBox1.Image= (Image)bmpDest;
 
         }
-        public void greeeen()
+        public void greeeen(object sender, EventArgs e)
         {
 
         }
@@ -114,6 +136,16 @@ namespace zad4
         private void label1_Click(object sender, EventArgs e)
         {
             label1.Text = rorataeval.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
