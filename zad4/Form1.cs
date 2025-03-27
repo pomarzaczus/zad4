@@ -11,6 +11,10 @@ namespace zad4
             InitializeComponent();
         }
         int rorataeval = 0;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
         public void loadImage(string filePath)
         {
             // Sprawdü, czy plik istnieje

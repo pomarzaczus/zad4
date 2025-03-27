@@ -31,6 +31,7 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             button2 = new Button();
+            button22 = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
@@ -46,7 +47,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "wczyt";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -59,14 +60,6 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
-      
-            button22.Location = new Point(477, 395);
-            button22.Name = "button22";
-            button22.Size = new Size(75, 23);
-            button22.TabIndex = 2;
-            button22.Text = "button22";
-            button22.UseVisualStyleBackColor = true;
-            button22.Click += button22_Click;
             // 
             // button2
             // 
@@ -74,9 +67,19 @@
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 2;
-            button2.Text = "button2";
+            button2.Text = "rotate";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // button22
+            // 
+            button22.Location = new Point(477, 395);
+            button22.Name = "button22";
+            button22.Size = new Size(75, 23);
+            button22.TabIndex = 2;
+            button22.Text = "button22";
+            button22.UseVisualStyleBackColor = true;
+            button22.Click += greeeen;
             // 
             // radioButton1
             // 
@@ -130,7 +133,7 @@
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 7;
-            button3.Text = "button3";
+            button3.Text = "invert";
             button3.UseVisualStyleBackColor = true;
             button3.Click += invert;
             // 
@@ -140,7 +143,7 @@
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 8;
-            button4.Text = "button4";
+            button4.Text = "flip";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -177,5 +180,6 @@
         private Label label1;
         private Button button3;
         private Button button4;
+        private Button button22;
     }
 }
