@@ -84,7 +84,7 @@ namespace zad4
         {
             // Wyœwietlenie okna dialogowego wyboru pliku CSV
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Pliki CSV (*.csv)|*.csv|Wszystkie pliki (*.*)|*.*";
+            openFileDialog1.Filter = "Pliki (*)|*|Wszystkie pliki (*.*)|*.*";
             openFileDialog1.Title = "Wybierz plik CSV do wczytania";
             openFileDialog1.ShowDialog();
             // Jeœli u¿ytkownik wybierze plik i zatwierdzi, wczytaj dane z pliku CSV
@@ -145,7 +145,8 @@ namespace zad4
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            pictureBox1.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            pictureBox1.Refresh();
         }
     }
 
