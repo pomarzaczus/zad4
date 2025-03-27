@@ -52,9 +52,7 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
-            // 
-            // button2
-            // 
+      
             button22.Location = new Point(477, 395);
             button22.Name = "button22";
             button22.Size = new Size(75, 23);
