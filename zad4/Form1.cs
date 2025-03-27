@@ -25,9 +25,9 @@ namespace zad4
         }
         private void wczytaj_Click(object sender, EventArgs e)
         {
-            
 
-            
+
+
         }
 
         public void rotateImage()
@@ -48,7 +48,32 @@ namespace zad4
         }
         public void greeeen()
         {
+            Bitmap bmpDest = null;
 
+            using (Bitmap bmpSource = new Bitmap(pictureBox1.Image))
+            {
+                bmpDest = new Bitmap(bmpSource.Width, bmpSource.Height);
+
+                for (int x = 0; x < bmpSource.Width; x++)
+                {
+                    for (int y = 0; y < bmpSource.Height; y++)
+                    {
+
+                        Color clrPixel = bmpSource.GetPixel(x, y);
+
+                        if (clrPixel.G < clrPixel.R + clrPixel.B)
+                        {
+                            clrPixel = Color.FromArgb(0, 0, 0);
+                        }
+
+
+
+                        bmpDest.SetPixel(x, y, clrPixel);
+                    }
+                }
+            }
+
+            pictureBox1.Image = (Image)bmpDest;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -69,6 +94,16 @@ namespace zad4
                 // Wywo³anie funkcji wczytuj¹cej dane z pliku CSV
                 loadImage(openFileDialog1.FileName);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            greeeen();
         }
     }
 
