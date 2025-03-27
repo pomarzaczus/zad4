@@ -71,7 +71,7 @@ namespace zad4
                 }
             }
 
-            pictureBox1.Image= (Image)bmpDest;
+            pictureBox1.Image = (Image)bmpDest;
 
         }
         public void greeeen(object sender, EventArgs e)
@@ -176,6 +176,11 @@ namespace zad4
         {
             pictureBox1.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
             pictureBox1.Refresh();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

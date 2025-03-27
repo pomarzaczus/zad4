@@ -38,6 +38,7 @@
             label1 = new Label();
             button3 = new Button();
             button4 = new Button();
+            xxxx = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -73,10 +74,10 @@
             // 
             // button22
             // 
-            button22.Location = new Point(477, 395);
+            button22.Location = new Point(100, 100);
             button22.Name = "button22";
-            button22.Size = new Size(75, 23);
-            button22.TabIndex = 2;
+            button22.Size = new Size(1000, 1000);
+            button22.TabIndex = 22;
             button22.Text = "button22";
             button22.UseVisualStyleBackColor = true;
             button22.Click += greeeen;
@@ -147,11 +148,22 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // xxxx
+            // 
+            xxxx.Location = new Point(447, 443);
+            xxxx.Name = "xxxx";
+            xxxx.Size = new Size(75, 23);
+            xxxx.TabIndex = 9;
+            xxxx.Text = "xxxx";
+            xxxx.UseVisualStyleBackColor = true;
+            xxxx.Click += greeeen;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(888, 544);
+            Controls.Add(xxxx);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(label1);
@@ -181,5 +193,6 @@
         private Button button3;
         private Button button4;
         private Button button22;
+        private Button xxxx;
     }
 }
